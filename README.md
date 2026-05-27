@@ -2,6 +2,12 @@
 
 Una plataforma web interactiva que demuestra cómo **Fibonacci** y **Números Primos** resuelven problemas reales del mundo.
 
+## 🌐 ¡Pruébalo Ahora!
+
+👉 **[Abre el sitio web aquí](https://aleyu17.github.io/proyectoweb1/)** ← Dale clic para empezar
+
+El proyecto está completamente funcional y listo para usar en cualquier navegador moderno (Chrome, Firefox, Safari, Edge).
+
 ---
 
 ## 🎯 Descripción del Proyecto
@@ -57,7 +63,7 @@ Ambos módulos incluyen simuladores interactivos que permiten al usuario ingresa
 ## 📁 Estructura del Proyecto
 
 ```
-desafio-mathverse/
+proyectoweb1/
 │
 ├── index.html              # Página principal (portal)
 ├── fibonacci.html          # Simulador de Fibonacci
@@ -77,28 +83,37 @@ desafio-mathverse/
 └── .gitignore              # Archivos a ignorar en Git
 ```
 
+**Publicado en:** GitHub Pages (aleyu17.github.io/proyectoweb1)
+
 ---
 
-## 🚀 Cómo Usar
+## 🚀 Cómo Acceder al Proyecto
 
-### 1. **Clonar el Repositorio**
+### ✨ Opción 1: Abierto en Línea (Recomendado)
+Simplemente visita la página publicada:
+👉 **[https://aleyu17.github.io/proyectoweb1/](https://aleyu17.github.io/proyectoweb1/)**
+
+El sitio está completamente funcional y listo para usar.
+
+### 💻 Opción 2: Ejecutar Localmente
+
+1. **Clonar el repositorio:**
 ```bash
-git clone https://github.com/[tu-usuario]/desafio-mathverse.git
-cd desafio-mathverse
+git clone https://github.com/aleyu17/proyectoweb1.git
+cd proyectoweb1
 ```
 
-### 2. **Abrir Localmente**
-- Abre `index.html` en tu navegador
-- O usa un servidor local:
+2. **Abrir en el navegador:**
+- Opción A: Abre `index.html` directamente
+- Opción B: Usa un servidor local:
 ```bash
 python -m http.server 8000
 # Luego visita http://localhost:8000
 ```
 
-### 3. **Explorar los Módulos**
-- **Fibonacci**: Click en "Abrir Planificador"
-- **Primos**: Click en "Abrir Bóveda"
-- Ingresa tus datos y haz click en calcular
+3. **Explorar los módulos:**
+- Haz click en "Abrir Planificador" para Fibonacci
+- Haz click en "Abrir Bóveda" para Números Primos
 
 ---
 
@@ -184,8 +199,14 @@ if (contador === 2) {
 
 ## 🔗 Enlaces
 
-- **Repositorio GitHub:** [Tu enlace aquí]
-- **Página Publicada:** [Tu enlace aquí]
+- **Repositorio GitHub:** [https://github.com/aleyu17/proyectoweb1](https://github.com/aleyu17/proyectoweb1)
+- **Página Publicada:** [https://aleyu17.github.io/proyectoweb1/](https://aleyu17.github.io/proyectoweb1/)
+
+### 🌐 Acceso Rápido a los Módulos
+
+**Desde la página principal:**
+- [Planificador Ágil (Fibonacci)](https://aleyu17.github.io/proyectoweb1/fibonacci.html)
+- [Bóveda de Cifrado (Números Primos)](https://aleyu17.github.io/proyectoweb1/primos.html)
 
 ---
 
@@ -203,11 +224,16 @@ if (contador === 2) {
 
 ---
 
-## 👨‍💻 Autor
+## 👨‍💻 Autor y Entrega
 
 **Proyecto desarrollado como desafío web educativo**
 
-Especificaciones técnicas completas según rubrica de evaluación.
+- **Repositorio:** [aleyu17/proyectoweb1](https://github.com/aleyu17/proyectoweb1)
+- **Demo en Vivo:** [https://aleyu17.github.io/proyectoweb1/](https://aleyu17.github.io/proyectoweb1/)
+- **Especificaciones:** Cumple 100% con la rubrica de evaluación universitaria
+- **Última actualización:** Mayo 2025
+
+**Estado:** ✅ Completado y publicado
 
 ---
 
