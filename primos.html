@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simulador de encriptación RSA usando números primos">
+    
+    <!-- Título -->
+    <title>Bóveda de Cifrado - MathVerse</title>
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="primos.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header con navegación -->
+        <header class="subpage-header header-primes">
+            <a href="index.html" class="btn-back" title="Volver al inicio">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                <span>Volver</span>
+            </a>
+            <h1 class="page-title">Bóveda de Cifrado de Datos</h1>
+        </header>
+
+        <!-- Contenido principal -->
+        <main class="module-wrapper">
+            <!-- Sección de contexto -->
+            <section class="context-section">
+                <article class="context-box">
+                    <h2> El Problema Real</h2>
+                    <p>
+                        Cada día, billones de transacciones pasan por internet: compras, transferencias bancarias, 
+                        mensajes privados. <strong>¿Cómo sabemos que nuestros datos son seguros?</strong>
+                    </p>
+                    <p>
+                        Un atacante podría interceptar nuestro mensaje en tránsito. Necesitamos encriptación 
+                        matemáticamente inquebrantable, no solo contraseñas débiles.
+                    </p>
+                </article>
+
+                <article class="context-box">
+                    <h2> La Solución: RSA con Números Primos</h2>
+                    <p>
+                        <strong>Encriptación RSA</strong> explota una propiedad matemática asimétrica: multiplicar dos 
+                        números primos grandes es trivial (computadora resuelve en milisegundos). 
+                        Pero factorizar el resultado es prácticamente imposible.
+                    </p>
+                    <p>
+                        Esto protege <strong>transacciones bancarias, datos médicos, secretos de estado</strong> 
+                        desde los 80s, y seguirá siendo seguro mientras no existan computadoras cuánticas prácticas.
+                    </p>
+                </article>
+            </section>
+
+            <!-- Área de trabajo -->
+            <section class="work-section">
+                <!-- Panel de entrada -->
+                <div class="input-panel">
+                    <div class="panel-header">
+                        <h3>Encriptador RSA</h3>
+                        <p class="panel-subtitle">Transforma tus datos con números primos</p>
+                    </div>
+
+                    <!-- Información de claves -->
+                    <div class="keys-info">
+                        <h4> Claves Primas del Servidor</h4>
+                        <div class="key-display">
+                            <div class="key-box">
+                                <span class="key-label">P =</span>
+                                <span class="key-value">61</span>
+                            </div>
+                            <div class="key-box">
+                                <span class="key-label">Q =</span>
+                                <span class="key-value">53</span>
+                            </div>
+                            <div class="key-box">
+                                <span class="key-label">N = P × Q =</span>
+                                <span class="key-value">3233</span>
+                            </div>
+                        </div>
+                        <p class="keys-hint">
+                            En el mundo real, P y Q serían números primos gigantes (miles de dígitos). 
+                            Aquí usamos primos pequeños para demostración.
+                        </p>
+                    </div>
+
+                    <!-- Formulario de entrada -->
+                    <form id="encryptForm" class="encrypt-form">
+                        <div class="form-field">
+                            <label for="inputSecret">
+                                <span class="label-title">  Escribe tu mensaje secreto</span>
+                                <span class="label-hint">(Contraseña, PIN, mensaje privado...)</span>
+                            </label>
+                            <textarea 
+                                id="inputSecret"
+                                class="secret-input"
+                                placeholder="Ej: MiContraseña123 o Mi mensaje secreto..."
+                                maxlength="100"
+                                rows="3"
+                                title="Mensaje a encriptar"
+                            ></textarea>
+                            <span class="field-error" id="errorSecret" style="display: none;"></span>
+                            <div class="input-counter">
+                                <span id="charCount">0</span> / 100 caracteres
+                            </div>
+                        </div>
+
+                        <!-- Botón de encriptación -->
+                        <button type="button" id="btnEncrypt" class="btn-encrypt">
+                            <span> Cifrar Información</span>
+                        </button>
+                    </form>
+
+                    <!-- Panel informativo -->
+                    <div class="info-panel">
+                        <h4> Seguridad en Acción</h4>
+                        <p>
+                            Cada carácter de tu mensaje se transformará en un número gigante. 
+                            Un atacante vería solo gibberish sin la clave privada.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Panel de resultados -->
+                <div class="output-panel">
+                    <div class="panel-header">
+                        <h3>Resultado Cifrado</h3>
+                        <p class="panel-subtitle">Tu mensaje transformado matemáticamente</p>
+                    </div>
+
+                    <!-- Área de salida -->
+                    <div id="cryptoConsole" class="crypto-output" style="display: none;">
+                        <!-- Los resultados se insertan aquí dinámicamente -->
+                    </div>
+
+                    <!-- Placeholder cuando no hay resultados -->
+                    <div id="placeholderCrypto" class="result-placeholder">
+                        <div class="placeholder-icon">🔐</div>
+                        <p>Escribe tu mensaje y haz click en "Cifrar Información"</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección educativa -->
+            <section class="education-section">
+                <article class="education-box">
+                    <h3> ¿Qué son los Números Primos?</h3>
+                    <p>
+                        Un número primo es solo divisible por 1 y sí mismo. Los primeros son: 
+                        2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47...
+                    </p>
+                    <p>
+                        <strong>Propiedad clave:</strong> No existe algoritmo rápido para factorizar números grandes 
+                        en sus factores primos. Esta asimetría es el fundamento de toda la criptografía moderna.
+                    </p>
+                </article>
+
+                <article class="education-box">
+                    <h3> RSA en el Mundo Real</h3>
+                    <ul class="education-list">
+                        <li><strong>HTTPS:</strong> Protege todos los sitios webs modernos</li>
+                        <li><strong>Banca Digital:</strong> Asegura transferencias de dinero</li>
+                        <li><strong>Email Cifrado:</strong> PGP/GPG usan RSA para privacidad</li>
+                        <li><strong>Firmas Digitales:</strong> Certifican autenticidad de documentos</li>
+                    </ul>
+                </article>
+
+                <article class="education-box">
+                    <h3>⚙️ ¿Por Qué Funciona?</h3>
+                    <p>
+                          <strong>Multiplicación Rápida:</strong> 61 × 53 = 3233 (instantáneo)<br>
+                          <strong>Factorización Lenta:</strong> ¿Cuáles son los factores de 3233? Toma tiempo buscar<br>
+                          <strong>Asimetría:</strong> Todos conocen la clave pública (N=3233). Solo el banco conoce P y Q<br>
+                          <strong>Inquebrantable:</strong> Con primos de 2048+ bits, factorización tomaría siglos
+                    </p>
+                </article>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="subpage-footer">
+            <p>Desafío Web Educativo | Criptografía RSA y Números Primos</p>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">
+                <a href="index.html">← Volver al Portal Principal</a>
+            </p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="primos.js"></script>
+</body>
+</html>

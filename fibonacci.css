@@ -1,0 +1,560 @@
+/* ==========================================
+   FIBONACCI - ESTILOS ESPECÍFICOS
+   Diseño de página de módulo
+   ========================================== */
+
+/* Variables específicas de Fibonacci */
+:root {
+    --accent-module: #10b981;
+    --accent-module-light: #6ee7b7;
+}
+
+/* ==========================================
+   HEADER DE SUBPÁGINA
+   ========================================== */
+
+.subpage-header {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(16, 185, 129, 0.05));
+    border-bottom: 2px solid var(--accent-module);
+    padding: var(--spacing-lg) var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: transparent;
+    border: 2px solid var(--accent-module);
+    border-radius: 8px;
+    color: var(--accent-module);
+    font-weight: 600;
+    transition: all var(--transition-fast);
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.btn-back:hover {
+    background-color: var(--accent-module);
+    color: var(--bg-primary);
+    transform: translateX(-4px);
+}
+
+.page-title {
+    flex: 1;
+    margin: 0;
+    color: var(--accent-module);
+    font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+    .subpage-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: var(--spacing-md) var(--spacing-md);
+    }
+    
+    .page-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* ==========================================
+   CONTENEDOR DE MÓDULO
+   ========================================== */
+
+.module-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--spacing-xl) var(--spacing-lg);
+    width: 100%;
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .module-wrapper {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+}
+
+/* ==========================================
+   SECCIÓN DE CONTEXTO
+   ========================================== */
+
+.context-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+@media (max-width: 900px) {
+    .context-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+.context-box {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), transparent);
+    border: 2px dashed var(--border-light);
+    border-radius: 12px;
+    padding: var(--spacing-lg);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.context-box h2 {
+    color: var(--accent-module);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.5rem;
+}
+
+.context-box p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+}
+
+.context-box p:last-child {
+    margin-bottom: 0;
+}
+
+.context-box strong {
+    color: var(--accent-module-light);
+    font-weight: 600;
+}
+
+.context-box em {
+    color: var(--accent-module);
+    font-style: italic;
+}
+
+/* ==========================================
+   SECCIÓN DE TRABAJO (Entrada + Salida)
+   ========================================== */
+
+.work-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+@media (max-width: 1024px) {
+    .work-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Paneles generales */
+.input-panel,
+.output-panel {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    border-radius: 16px;
+    padding: var(--spacing-lg);
+    transition: all var(--transition-normal);
+}
+
+.input-panel:hover,
+.output-panel:hover {
+    border-color: var(--accent-module);
+    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.1);
+}
+
+/* Header de panel */
+.panel-header {
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 2px solid var(--border-light);
+}
+
+.panel-header h3 {
+    margin: 0 0 var(--spacing-xs) 0;
+    color: var(--accent-module);
+    font-size: 1.4rem;
+}
+
+.panel-subtitle {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* ==========================================
+   FORMULARIO
+   ========================================== */
+
+.agile-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.form-field label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.label-title {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+.label-hint {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.form-field input {
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--bg-primary);
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    color: var(--text-primary);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1rem;
+    transition: all var(--transition-fast);
+    outline: none;
+}
+
+.form-field input:focus {
+    border-color: var(--accent-module);
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.form-field input:invalid {
+    border-color: #ef4444;
+}
+
+/* Mensaje de error */
+.field-error {
+    font-size: 0.85rem;
+    color: #ef4444;
+    margin-top: -0.25rem;
+    font-weight: 500;
+}
+
+/* ==========================================
+   BOTÓN DE CÁLCULO
+   ========================================== */
+
+#btnCalcular {
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: linear-gradient(135deg, var(--accent-module), var(--accent-module-light));
+    color: var(--bg-primary);
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    margin-top: var(--spacing-sm);
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
+}
+
+#btnCalcular:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
+}
+
+#btnCalcular:active {
+    transform: translateY(0);
+}
+
+#btnCalcular:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ==========================================
+   PANEL INFORMATIVO
+   ========================================== */
+
+.info-panel {
+    background-color: rgba(16, 185, 129, 0.1);
+    border: 2px solid var(--border-light);
+    border-radius: 10px;
+    padding: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.info-panel h4 {
+    color: var(--accent-module);
+    margin-bottom: var(--spacing-xs);
+    font-size: 1rem;
+}
+
+.info-panel p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ==========================================
+   ÁREA DE RESULTADOS
+   ========================================== */
+
+.result-area {
+    animation: slideIn 0.4s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Placeholder de resultado */
+.result-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.placeholder-icon {
+    font-size: 3.5rem;
+    margin-bottom: var(--spacing-md);
+    opacity: 0.5;
+}
+
+.result-placeholder p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* ==========================================
+   TABLA DE RESULTADOS
+   ========================================== */
+
+.escala-tabla {
+    width: 100%;
+    margin-bottom: var(--spacing-md);
+}
+
+.escala-header {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background-color: rgba(16, 185, 129, 0.1);
+    border-bottom: 2px solid var(--accent-module);
+    border-radius: 8px 8px 0 0;
+    font-weight: 700;
+    color: var(--accent-module);
+    margin-bottom: 0;
+}
+
+.escala-row {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--border-light);
+    align-items: center;
+}
+
+.escala-row:last-child {
+    border-bottom: none;
+    border-radius: 0 0 8px 8px;
+    background-color: rgba(16, 185, 129, 0.05);
+}
+
+.escala-row:hover {
+    background-color: rgba(16, 185, 129, 0.1);
+}
+
+.escala-label {
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.escala-valor {
+    text-align: right;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--accent-module);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* ==========================================
+   CAJA DE EXPLICACIÓN
+   ========================================== */
+
+.explanation-box {
+    background-color: rgba(16, 185, 129, 0.08);
+    border-left: 4px solid var(--accent-module);
+    padding: var(--spacing-md);
+    margin-top: var(--spacing-md);
+    border-radius: 0 8px 8px 0;
+}
+
+.explanation-box h4 {
+    color: var(--accent-module);
+    margin-bottom: var(--spacing-xs);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.explanation-box p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: var(--spacing-xs);
+}
+
+.explanation-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================
+   SECCIÓN EDUCATIVA
+   ========================================== */
+
+.education-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-lg);
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+@media (max-width: 900px) {
+    .education-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+.education-box {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), transparent);
+    border: 2px solid var(--border-light);
+    border-radius: 12px;
+    padding: var(--spacing-lg);
+    transition: all var(--transition-normal);
+}
+
+.education-box:hover {
+    border-color: var(--accent-module);
+    transform: translateY(-4px);
+}
+
+.education-box h3 {
+    color: var(--accent-module);
+    margin-bottom: var(--spacing-md);
+}
+
+.education-box p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+}
+
+.education-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* Bloque de código */
+.code-block {
+    display: block;
+    background-color: var(--bg-primary);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: var(--spacing-md) 0;
+    border: 1px solid var(--border-light);
+    color: var(--accent-module);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Lista educativa */
+.education-list {
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing-md) 0 0 0;
+}
+
+.education-list li {
+    padding: var(--spacing-sm) 0;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.education-list li:before {
+    content: '✓ ';
+    color: var(--accent-module);
+    font-weight: bold;
+    margin-right: var(--spacing-xs);
+}
+
+/* ==========================================
+   FOOTER DE SUBPÁGINA
+   ========================================== */
+
+.subpage-footer {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+    border-top: 2px solid var(--border-color);
+    padding: var(--spacing-lg);
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+.subpage-footer p {
+    margin: var(--spacing-xs) 0;
+}
+
+.subpage-footer a {
+    color: var(--accent-module);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color var(--transition-fast);
+}
+
+.subpage-footer a:hover {
+    color: var(--accent-module-light);
+}
+
+/* ==========================================
+   RESPONSIVIDAD
+   ========================================== */
+
+@media (max-width: 768px) {
+    .work-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .escala-header,
+    .escala-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .escala-valor {
+        text-align: left;
+        order: -1;
+    }
+}

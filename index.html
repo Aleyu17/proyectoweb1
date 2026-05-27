@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MathVerse - Soluciones matemáticas interactivas para problemas del mundo real">
+    <meta name="author" content="Desafío Web Educativo">
+    
+    <!-- Título -->
+    <title>MathVerse - Fibonacci y Números Primos</title>
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Fonts de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="page-wrapper">
+        <!-- Header/Portada -->
+        <header class="hero-section">
+            <div class="hero-background"></div>
+            <div class="hero-content">
+                <h1 class="main-title" id="main-title">MathVerse</h1>
+                <p class="hero-subtitle">Soluciones Matemáticas para Problemas del Mundo Real</p>
+                <p class="hero-description">
+                    Explora cómo la <strong>sucesión de Fibonacci</strong> y los <strong>números primos</strong> 
+                    resuelven desafíos reales en tecnología, negocios y seguridad.
+                </p>
+            </div>
+        </header>
+
+        <!-- Sección de herramientas -->
+        <main class="tools-section">
+            <!-- Introducción -->
+            <section class="intro-block">
+                <h2>¿Por qué las matemáticas importan?</h2>
+                <p>
+                    Muchos problemas complejos en el mundo real tienen soluciones elegantes basadas en patrones 
+                    matemáticos. En esta plataforma, descubrirás dos herramientas poderosas aplicadas a contextos 
+                    prácticos: desde planificación de proyectos hasta ciberseguridad.
+                </p>
+            </section>
+
+            <!-- Grid de herramientas -->
+            <div class="tools-grid">
+                <!-- Card Fibonacci -->
+                <article class="tool-card card-fibonacci">
+                    <div class="card-header">
+                        <div class="card-icon icon-fibonacci">φ</div>
+                        <h3>Sucesión de Fibonacci</h3>
+                    </div>
+                    
+                    <div class="card-content">
+                        <h4 class="problem-title"> Problema Real</h4>
+                        <p class="problem-description">
+                            Estimar tiempos en proyectos ágiles es difícil. Los equipos no saben si una tarea 
+                            será de 5 o 6 horas, pero sí saben si es mucho más compleja que otra.
+                        </p>
+                        
+                        <h4 class="solution-title"> Solución</h4>
+                        <p class="solution-description">
+                            Planning Poker con Fibonacci obliga a aceptar la incertidumbre matemática real, 
+                            evitando estimaciones falsamente precisas.
+                        </p>
+                        
+                        <div class="features-list">
+                            <span class="feature">Cálculo automático</span>
+                            <span class="feature">Escala de esfuerzo</span>
+                            <span class="feature">Análisis de tiempo</span>
+                        </div>
+                    </div>
+                    
+                    <a href="fibonacci.html" class="card-action btn-fibonacci">
+                        <span>Abrir Planificador</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </article>
+
+                <!-- Card Números Primos -->
+                <article class="tool-card card-primes">
+                    <div class="card-header">
+                        <div class="card-icon icon-primes"> </div>
+                        <h3>Números Primos</h3>
+                    </div>
+                    
+                    <div class="card-content">
+                        <h4 class="problem-title"> Problema Real</h4>
+                        <p class="problem-description">
+                            Proteger datos bancarios y transacciones digitales. Un atacante podría interceptar 
+                            cualquier mensaje; necesitamos encriptación matemáticamente inquebrantable.
+                        </p>
+                        
+                        <h4 class="solution-title">Solución</h4>
+                        <p class="solution-description">
+                            Multiplicar dos números primos grandes es fácil; factorizar el resultado es 
+                            prácticamente imposible. Base de la encriptación RSA moderna.
+                        </p>
+                        
+                        <div class="features-list">
+                            <span class="feature">Encriptación RSA</span>
+                            <span class="feature">Transformación de datos</span>
+                            <span class="feature">Seguridad matemática</span>
+                        </div>
+                    </div>
+                    
+                    <a href="primos.html" class="card-action btn-primes">
+                        <span>Abrir Bóveda</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </article>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer-section">
+            <div class="footer-content">
+                <h3>Conceptos Matemáticos Clave</h3>
+                <div class="concepts-grid">
+                    <div class="concept-box">
+                        <h4>Fibonacci</h4>
+                        <p>Secuencia donde cada número es suma de los dos anteriores: 1, 1, 2, 3, 5, 8, 13...</p>
+                    </div>
+                    <div class="concept-box">
+                        <h4>Números Primos</h4>
+                        <p>Solo divisibles por 1 y sí mismos. Fundamentales en criptografía moderna.</p>
+                    </div>
+                    <div class="concept-box">
+                        <h4>Aplicaciones Reales</h4>
+                        <p>De la naturaleza a la banca: estas matemáticas resuelven problemas cotidianos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p><strong>Desafío Web Educativo</strong> | Matemáticas + Tecnología</p>
+                <p style="font-size: 0.85rem; margin-top: 0.5rem; color: #94a3b8;">
+                    Implementado con HTML5, CSS3 y JavaScript Vanilla
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

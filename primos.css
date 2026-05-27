@@ -1,0 +1,541 @@
+/* ==========================================
+   PRIMOS - ESTILOS ESPECÍFICOS
+   Diseño de página de módulo de encriptación
+   ========================================== */
+
+/* Variables específicas de Primos */
+:root {
+    --accent-module: #8b5cf6;
+    --accent-module-light: #c4b5fd;
+}
+
+/* ==========================================
+   HEADER DE SUBPÁGINA (Primos)
+   ========================================== */
+
+.subpage-header.header-primes {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(139, 92, 246, 0.05));
+    border-bottom-color: var(--accent-module);
+}
+
+.header-primes .btn-back {
+    border-color: var(--accent-module);
+    color: var(--accent-module);
+}
+
+.header-primes .btn-back:hover {
+    background-color: var(--accent-module);
+}
+
+.header-primes .page-title {
+    color: var(--accent-module);
+}
+
+/* ==========================================
+   CONTEXTO (Primos)
+   ========================================== */
+
+.context-box {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.05), transparent);
+    border-color: var(--border-light);
+}
+
+.context-box h2 {
+    color: var(--accent-module);
+}
+
+.context-box strong {
+    color: var(--accent-module-light);
+}
+
+.context-box em {
+    color: var(--accent-module);
+}
+
+/* ==========================================
+   PANELES (Primos)
+   ========================================== */
+
+.input-panel,
+.output-panel {
+    border-color: var(--border-color);
+}
+
+.input-panel:hover,
+.output-panel:hover {
+    border-color: var(--accent-module);
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.1);
+}
+
+.panel-header h3 {
+    color: var(--accent-module);
+}
+
+/* ==========================================
+   INFORMACIÓN DE CLAVES
+   ========================================== */
+
+.keys-info {
+    background-color: rgba(139, 92, 246, 0.08);
+    border: 2px solid var(--border-light);
+    border-radius: 12px;
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    transition: all var(--transition-normal);
+}
+
+.keys-info:hover {
+    border-color: var(--accent-module);
+    background-color: rgba(139, 92, 246, 0.12);
+}
+
+.keys-info h4 {
+    color: var(--accent-module);
+    margin-bottom: var(--spacing-md);
+    font-size: 1rem;
+}
+
+.key-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.key-box {
+    background: var(--bg-primary);
+    border: 2px solid var(--accent-module);
+    border-radius: 8px;
+    padding: var(--spacing-md);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.key-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.key-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-module);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.keys-hint {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.6;
+    padding: var(--spacing-sm);
+    background-color: rgba(139, 92, 246, 0.05);
+    border-left: 3px solid var(--accent-module);
+    border-radius: 0 4px 4px 0;
+}
+
+/* ==========================================
+   FORMULARIO DE ENCRIPTACIÓN
+   ========================================== */
+
+.encrypt-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.form-field label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.label-title {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+.label-hint {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.secret-input {
+    padding: var(--spacing-md);
+    background-color: var(--bg-primary);
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    color: var(--text-primary);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.95rem;
+    resize: vertical;
+    min-height: 100px;
+    transition: all var(--transition-fast);
+    outline: none;
+}
+
+.secret-input:focus {
+    border-color: var(--accent-module);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.secret-input::placeholder {
+    color: var(--text-muted);
+}
+
+/* Contador de caracteres */
+.input-counter {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-align: right;
+    margin-top: -0.5rem;
+}
+
+.input-counter.warning {
+    color: #f59e0b;
+}
+
+.input-counter.danger {
+    color: #ef4444;
+}
+
+/* Mensaje de error */
+.field-error {
+    font-size: 0.85rem;
+    color: #ef4444;
+    font-weight: 500;
+}
+
+/* ==========================================
+   BOTÓN DE ENCRIPTACIÓN
+   ========================================== */
+
+#btnEncrypt {
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: linear-gradient(135deg, var(--accent-module), var(--accent-module-light));
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    margin-top: var(--spacing-sm);
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+#btnEncrypt::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.3), transparent);
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+}
+
+#btnEncrypt:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.3);
+}
+
+#btnEncrypt:hover::before {
+    opacity: 1;
+}
+
+#btnEncrypt:active {
+    transform: translateY(0);
+}
+
+#btnEncrypt:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ==========================================
+   PANEL INFORMATIVO
+   ========================================== */
+
+.info-panel {
+    background-color: rgba(139, 92, 246, 0.1);
+    border: 2px solid var(--border-light);
+    border-radius: 10px;
+    padding: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.info-panel h4 {
+    color: var(--accent-module);
+    margin-bottom: var(--spacing-xs);
+    font-size: 1rem;
+}
+
+.info-panel p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ==========================================
+   ÁREA DE RESULTADOS
+   ========================================== */
+
+.crypto-output {
+    animation: slideIn 0.4s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.result-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.placeholder-icon {
+    font-size: 3.5rem;
+    margin-bottom: var(--spacing-md);
+    opacity: 0.5;
+}
+
+.result-placeholder p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* ==========================================
+   SALIDA CRIPTOGRÁFICA
+   ========================================== */
+
+.crypto-status {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    background-color: rgba(139, 92, 246, 0.1);
+    border: 2px solid var(--accent-module);
+    border-radius: 10px;
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.status-icon {
+    font-size: 1.5rem;
+}
+
+.status-text h4 {
+    margin: 0 0 var(--spacing-xs) 0;
+    color: var(--accent-module);
+    font-size: 0.95rem;
+}
+
+.status-text p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+/* Caja de resultado cifrado */
+.encrypted-box {
+    background: var(--bg-primary);
+    border: 2px solid var(--accent-module);
+    border-radius: 10px;
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+.encrypted-box h4 {
+    color: var(--accent-module);
+    margin-bottom: var(--spacing-md);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.encrypted-data {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--accent-module);
+    font-size: 0.85rem;
+    word-break: break-all;
+    line-height: 1.8;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* Barra de desplazamiento personalizada */
+.encrypted-data::-webkit-scrollbar {
+    width: 8px;
+}
+
+.encrypted-data::-webkit-scrollbar-track {
+    background: rgba(139, 92, 246, 0.05);
+    border-radius: 4px;
+}
+
+.encrypted-data::-webkit-scrollbar-thumb {
+    background: var(--accent-module);
+    border-radius: 4px;
+}
+
+.encrypted-data::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-module-light);
+}
+
+/* Caja de explicación */
+.explanation-box {
+    background-color: rgba(139, 92, 246, 0.08);
+    border-left: 4px solid var(--accent-module);
+    padding: var(--spacing-md);
+    margin-top: var(--spacing-md);
+    border-radius: 0 8px 8px 0;
+}
+
+.explanation-box h4 {
+    color: var(--accent-module);
+    margin-bottom: var(--spacing-xs);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.explanation-box p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: var(--spacing-xs);
+}
+
+.explanation-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================
+   SECCIÓN EDUCATIVA
+   ========================================== */
+
+.education-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-lg);
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+@media (max-width: 900px) {
+    .education-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+.education-box {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), transparent);
+    border: 2px solid var(--border-light);
+    border-radius: 12px;
+    padding: var(--spacing-lg);
+    transition: all var(--transition-normal);
+}
+
+.education-box:hover {
+    border-color: var(--accent-module);
+    transform: translateY(-4px);
+}
+
+.education-box h3 {
+    color: var(--accent-module);
+    margin-bottom: var(--spacing-md);
+}
+
+.education-box p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+}
+
+.education-box p:last-child {
+    margin-bottom: 0;
+}
+
+.education-list {
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing-md) 0 0 0;
+}
+
+.education-list li {
+    padding: var(--spacing-sm) 0;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.education-list li:before {
+    content: '✓ ';
+    color: var(--accent-module);
+    font-weight: bold;
+    margin-right: var(--spacing-xs);
+}
+
+/* ==========================================
+   RESPONSIVIDAD
+   ========================================== */
+
+@media (max-width: 768px) {
+    .key-display {
+        grid-template-columns: 1fr;
+    }
+    
+    .encrypted-data {
+        max-height: 150px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .keys-info {
+        padding: var(--spacing-md);
+    }
+    
+    .key-box {
+        padding: var(--spacing-sm);
+    }
+    
+    .key-value {
+        font-size: 1.5rem;
+    }
+    
+    .secret-input {
+        min-height: 80px;
+    }
+}
